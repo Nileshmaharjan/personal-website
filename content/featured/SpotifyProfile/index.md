@@ -1,15 +1,17 @@
 ---
-date: '2'
-title: 'Spotify Profile'
-cover: './demo.png'
-github: 'https://github.com/bchiang7/spotify-profile'
-external: 'https://spotify-profile.herokuapp.com/'
+date: '2020-12-02'
+title: 'Super Resolution-Guided Object Detection in Remote Sensing Imagery'
+cover: './super.png'
+external: 'https://docs.google.com/presentation/d/1EGGVNlmvEde4QT6O3Xp84NbFhZUEafzkMQRe-leDw1I/edit#slide=id.p'
 tech:
-  - React
-  - Styled Components
-  - Express
-  - Spotify API
-  - Heroku
+  - OpenCV
+  - Pytorch
+  - YOLO
+  - Docker
+  - Linux
+
+company: 'Changwon National University'
+showInProjects: true
 ---
 
-A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+Leverages denoising autoencoder, multimodal fusion technique and superresolution network architecture to improve vehicle detection performance.

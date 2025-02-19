@@ -44,6 +44,10 @@ const StyledHeroSection = styled.section`
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }
+  .resume-link {
+    ${({ theme }) => theme.mixins.bigButton};
+    margin-top: 50px;
+  }
 `;
 
 const Hero = () => {
@@ -60,32 +64,36 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const two = <h2 className="big-heading">Nilesh Maharjan.</h2>;
+  const three = <h3 className="big-heading">Machine Learning Engineer</h3>;
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
-        </a>
-        .
+        I blend code with data to create intelligent, user-friendly applications. From elegant
+        interfaces to powerful algorithms, I'm at the intersection of innovation.{' '}
       </p>
     </>
   );
   const five = (
     <a
       className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
+      href="https://docs.google.com/document/d/1-XbK87_pNsSL7bmdQqIyfwc4O4pFa9oBeA4v8yaH8Co/edit?usp=sharing"
       target="_blank"
       rel="noreferrer">
-      Check out my course!
+      Check out my detail projects porfolio
+    </a>
+  );
+  const six = (
+    <a
+      className="resume-link"
+      href="https://drive.google.com/file/d/1gkPajewW_xplgy6hg6xZMdfqMEavGQSE/view?usp=sharing?"
+      target="_blank"
+      rel="noreferrer">
+      Check out my resume
     </a>
   );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three, four, five, six];
 
   return (
     <StyledHeroSection>
