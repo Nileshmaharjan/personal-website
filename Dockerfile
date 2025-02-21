@@ -1,6 +1,6 @@
 FROM node:20.11.1
 
-EXPOSE 8000
+EXPOSE 9000
 WORKDIR /app
 
 COPY . /app
@@ -15,4 +15,6 @@ RUN npm install -g gatsby-cli \
     && nvm use 20.11.1 \
 
 RUN yarn
-ENTRYPOINT ["npm", "start"]
+
+CMD ["npm", "run", "build"]
+CMD ["npm", "run", "serve"]
