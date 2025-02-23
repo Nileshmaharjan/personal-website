@@ -1,15 +1,19 @@
-version: '1.2'
+version: '1.5' # Modern version for better compatibility
 
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
+      # Explicitly define platform for Apple Silicon
+      args:
+        - PLATFORM=linux/arm64
     ports:
-      - "9000:9000"
+      - '9000:9000'
     volumes:
-      - .:/app
+      - .:/app # Sync project files
+      - /app/node_modules # Avoid node_modules conflicts
     environment:
       - NODE_ENV=development
-    stdin_open: true
-    tty: true
+    stdin_open: true # Keep STDIN open for interactive processes
+    tty: true # Allocate a pseudo-TTY

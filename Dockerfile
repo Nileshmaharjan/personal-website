@@ -1,20 +1,24 @@
-FROM node:20.11.1
+# Use an ARM64 compatible Node.js image for Apple Silicon
+FROM node:20
 
-EXPOSE 9000
+# Set the working directory inside the container
 WORKDIR /app
 
-COPY . /app
+# Install global dependencies
+RUN npm install -g gatsby-cli --unsafe-perm=true
 
-RUN npm install -g gatsby-cli \
-    && apt-get update \
-    && apt-get install curl -y \
-    && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash \
-    && export NVM_DIR="$HOME/.nvm" \
-    && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" \
-    && nvm install 20.11.1 \
-    && nvm use 20.11.1 \
+# Copy only the package.json and yarn.lock first to install dependencies
+COPY package.json yarn.lock ./
 
-RUN yarn
+# Install project dependencies
+RUN yarn install
 
+# Copy the rest of the application code
+COPY . .
+
+# Expose port 9000 for Gatsby's default development server
+EXPOSE 9000
+
+# Default command to run Gatsby's development server
 CMD ["npm", "run", "build"]
 CMD ["npm", "run", "serve"]
