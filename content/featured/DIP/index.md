@@ -1,7 +1,7 @@
 ---
 date: '2020-02-01'
 title: 'Enhancing Hyperspectral Pansharpening with Spatial Constraints and HyperKite Networks'
-coverImage: './dip.jpg'
+coverImage: './Dip.jpg'
 external: 'https://docs.google.com/presentation/d/1ZtDs6PpsWnMzCG1fBgs9VyFmYUBoxkKpTsnHue1f03U/edit#slide=id.p'
 tech:
   - OpenCV
