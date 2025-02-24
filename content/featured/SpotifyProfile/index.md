@@ -1,7 +1,7 @@
 ---
 date: '2020-12-02'
 title: 'Super Resolution-Guided Object Detection in Remote Sensing Imagery'
-coverImage: './super.png'
+coverImage: './super.jpg'
 external: 'https://docs.google.com/presentation/d/1EGGVNlmvEde4QT6O3Xp84NbFhZUEafzkMQRe-leDw1I/edit#slide=id.p'
 tech:
   - OpenCV
