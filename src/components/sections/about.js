@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
@@ -46,72 +45,72 @@ const StyledText = styled.div`
     }
   }
 `;
-const StyledPic = styled.div`
-  position: relative;
-  max-width: 300px;
+// const StyledPic = styled.div`
+//   position: relative;
+//   max-width: 300px;
 
-  @media (max-width: 768px) {
-    margin: 50px auto 0;
-    width: 70%;
-  }
+//   @media (max-width: 768px) {
+//     margin: 50px auto 0;
+//     width: 70%;
+//   }
 
-  .wrapper {
-    ${({ theme }) => theme.mixins.boxShadow};
-    display: block;
-    position: relative;
-    width: 100%;
-    border-radius: var(--border-radius);
-    background-color: var(--green);
+//   .wrapper {
+//     ${({ theme }) => theme.mixins.boxShadow};
+//     display: block;
+//     position: relative;
+//     width: 100%;
+//     border-radius: var(--border-radius);
+//     background-color: var(--green);
 
-    &:hover,
-    &:focus {
-      outline: 0;
-      transform: translate(-4px, -4px);
+//     &:hover,
+//     &:focus {
+//       outline: 0;
+//       transform: translate(-4px, -4px);
 
-      &:after {
-        transform: translate(8px, 8px);
-      }
+//       &:after {
+//         transform: translate(8px, 8px);
+//       }
 
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
-      }
-    }
+//       .img {
+//         filter: none;
+//         mix-blend-mode: normal;
+//       }
+//     }
 
-    .img {
-      position: relative;
-      border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: var(--transition);
-    }
+//     .img {
+//       position: relative;
+//       border-radius: var(--border-radius);
+//       mix-blend-mode: multiply;
+//       filter: grayscale(100%) contrast(1);
+//       transition: var(--transition);
+//     }
 
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
-    }
+//     &:before,
+//     &:after {
+//       content: '';
+//       display: block;
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       border-radius: var(--border-radius);
+//       transition: var(--transition);
+//     }
 
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--navy);
-      mix-blend-mode: screen;
-    }
+//     &:before {
+//       top: 0;
+//       left: 0;
+//       background-color: var(--navy);
+//       mix-blend-mode: screen;
+//     }
 
-    &:after {
-      border: 2px solid var(--green);
-      top: 14px;
-      left: 14px;
-      z-index: -1;
-    }
-  }
-`;
+//     &:after {
+//       border: 2px solid var(--green);
+//       top: 14px;
+//       left: 14px;
+//       z-index: -1;
+//     }
+//   }
+// `;
 
 const About = () => {
   const revealContainer = useRef(null);
@@ -207,7 +206,7 @@ const About = () => {
           </ul>
         </StyledText>
 
-        <StyledPic>
+        {/* <StyledPic>
           <div className="wrapper">
             <StaticImage
               className="img"
@@ -218,7 +217,7 @@ const About = () => {
               alt="Headshot"
             />
           </div>
-        </StyledPic>
+        </StyledPic> */}
       </div>
     </StyledAboutSection>
   );
