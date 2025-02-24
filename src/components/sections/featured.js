@@ -314,7 +314,7 @@ const Featured = () => {
           node {
             frontmatter {
               title
-              coverImage {
+              coverImg {
                 childImageSharp {
                   gatsbyImageData(width: 700, formats: [AUTO, WEBP, AVIF])
                 }
@@ -355,8 +355,8 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, coverImage, cta } = frontmatter;
-            const image = getImage(coverImage);
+            const { external, title, tech, github, coverImg, cta } = frontmatter;
+            const image = getImage(coverImg);
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
