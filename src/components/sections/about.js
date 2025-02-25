@@ -124,49 +124,50 @@ const About = () => {
 
     sr.reveal(revealContainer.current, srConfig());
   }, []);
-  const skills = [
-    'Python',
-    'Computer Vision',
-    'Image Processing',
-    'Machine Learning Algorithms',
-    'Object Detection and Tracking',
-    'Natural Language Processing',
-    'Data Science',
-    'TensorFlow',
-    'PyTorch',
-    'Keras',
-    'OpenCV',
-    'Triton Inference Server',
-    'Scikit-learn',
-    'Pandas',
-    'NumPy',
-    'SciPy',
-    'Matplotlib',
-    'Seaborn',
-    'Pillow',
-    'MongoDB',
-    'SQL',
-    'PostgreSQL',
-    'MySQL',
-    'Redis',
-    'MinIO',
-    'Elasticsearch',
-    'Node.js',
-    'JavaScript',
-    'Nuxt 3',
-    'Express.js',
-    'AWS Lambda',
-    'Amazon S3',
-    'EC2',
-    'Azure VM',
-    'Azure Blob Storage',
-    'Docker',
-    'Nginx Proxy Server',
-    'GitHub Actions (CI/CD)',
-    'Ubuntu (Linux)',
-    'Prometheus',
-    'Grafana',
-  ];
+  const skills = {
+    'Software Development': ['Python', 'Node.js', 'JavaScript', 'Vue.js', 'Express.js', 'Nuxt 3'],
+    Databases: ['MongoDB', 'SQL', 'PostgreSQL', 'MySQL', 'Redis', 'MinIO', 'Elasticsearch'],
+    'Cloud Services and DevOps': [
+      'AWS Lambda',
+      'Amazon S3',
+      'EC2',
+      'Azure VM',
+      'Azure Blob Storage',
+      'Docker',
+      'Nginx Proxy Server',
+      'GitHub Actions (CI/CD)',
+      'Ubuntu (Linux)',
+    ],
+    'Data Science and Machine Learning': [
+      'TensorFlow',
+      'PyTorch',
+      'Keras',
+      'OpenCV',
+      'Triton Inference Server',
+      'Scikit-learn',
+      'Pandas',
+      'NumPy',
+      'SciPy',
+      'Matplotlib',
+      'Seaborn',
+      'Pillow',
+    ],
+    'Monitoring and Observability': ['Prometheus', 'Grafana'],
+  };
+
+  const renderSkills = () =>
+    Object.keys(skills).map((category, index) => (
+      <div key={index}>
+        <h3>{category}</h3>
+
+        <ul className="skills-list">
+          {skills[category].map((skill, i) => (
+            <li key={i}>{skill}</li>
+          ))}
+        </ul>
+        <br></br>
+      </div>
+    ));
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -200,11 +201,10 @@ const About = () => {
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
+            <br></br>
           </div>
 
-          <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-          </ul>
+          {renderSkills()}
         </StyledText>
 
         <StyledPic>
