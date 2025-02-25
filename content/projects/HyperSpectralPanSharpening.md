@@ -1,7 +1,6 @@
 ---
-date: '2020-02-01'
+date: '2022-12-01'
 title: 'Enhancing Hyperspectral Pansharpening'
-coverImg: './dip.jpg'
 external: 'https://docs.google.com/presentation/d/1ZtDs6PpsWnMzCG1fBgs9VyFmYUBoxkKpTsnHue1f03U/edit#slide=id.p'
 tech:
   - OpenCV
