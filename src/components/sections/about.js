@@ -186,7 +186,6 @@ const About = () => {
               Fast-forward to today, and I’ve had the privilege of working at few companies:{' '}
               <a href="https://www.m3sen.com/"> M3SEN Co. Ltd </a>,&nbsp;
               <a href="https://www.sevadevelopment.com/"> Seva Development </a>,&nbsp;
-              <a href="https://rosebaycorporate.com/"> Rosebay Consulting Pvt Ltd</a>, &nbsp;
               <a href="https://ebpearls.com.au/">Ebpearls Pvt Ltd</a>,&nbsp;
               <a href="https://acsl.creatorlink.net/">IISL Lab</a>. My main focus these days is
               researching on computer vision, and deep learning algorithms.
