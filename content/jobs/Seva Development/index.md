@@ -3,7 +3,7 @@ date: '2017-12-21'
 title: 'Associate Software Engineer'
 company: 'Seva Development'
 location: 'Kathmandu, Nepal'
-range: 'July 2018 - May 2019'
+range: 'July 2018 - Jan 2020'
 url: 'https://www.sevadevelopment.com/'
 ---
 
