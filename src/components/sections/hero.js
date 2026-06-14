@@ -86,7 +86,7 @@ const Hero = () => {
   const six = (
     <a
       className="resume-link"
-      href="https://drive.google.com/file/d/1gkPajewW_xplgy6hg6xZMdfqMEavGQSE/view?usp=sharing?"
+      href="https://drive.google.com/file/d/1v8eYTXD7jCiaF_kco134nwtocOKbyoTX/view?usp=sharing"
       target="_blank"
       rel="noreferrer">
       Check out my resume
